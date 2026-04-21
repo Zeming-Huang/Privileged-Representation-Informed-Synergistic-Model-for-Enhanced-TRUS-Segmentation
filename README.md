@@ -82,11 +82,9 @@ This project builds on and benefits from several important prior works and open-
 - The **MR to Ultrasound Registration for Prostate Challenge** dataset and related open resources for enabling reproducible prostate MRI-TRUS research.
 - Open-source community efforts that make code, pretrained models, and research artifacts accessible for reproducible medical AI research.
 
-If you use this repository, please also acknowledge the upstream works and datasets that materially support the PRISM pipeline.
+## Upstream References
 
-## Citation
-
-If you find this repository useful, please cite the PRISM paper when available. In addition, please consider citing the following upstream work and dataset used in this project context.
+The following references are included because they are relevant upstream works and resources used in the PRISM project context.
 
 ### MedSAM
 
@@ -118,3 +116,7 @@ If you find this repository useful, please cite the PRISM paper when available. 
 Reference text:
 
 Baum, Z. M. C., Saeed, S. U., Min, Z., Hu, Y., & Barratt, D. C. (2023). *MR to Ultrasound Registration for Prostate Challenge - Dataset* (Version 1.1.0) [Data set]. MICCAI 2023. Zenodo. [https://doi.org/10.5281/zenodo.8004388](https://doi.org/10.5281/zenodo.8004388)
+
+## Citation
+
+PRISM citation information will be added here when the paper metadata is finalized.
