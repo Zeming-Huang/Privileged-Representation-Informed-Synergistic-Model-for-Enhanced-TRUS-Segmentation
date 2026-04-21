@@ -8,16 +8,7 @@ Transrectal ultrasound (TRUS) segmentation is clinically important but remains c
 
 ## Framework
 
-The README is prepared for the framework figure below.  
-To render it on GitHub, place your uploaded architecture figure at:
-
-`assets/prism_framework.png`
-
-Then uncomment or keep the following line as the displayed figure:
-
-```md
 ![PRISM framework](assets/prism_framework.png)
-```
 
 ## Overview
 
