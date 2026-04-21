@@ -1,15 +1,30 @@
 # PRISM
 
-Official implementation of PRISM.
+Official implementation of **PRISM**: **Privileged Representation-Informed Synergistic Model for Enhanced TRUS Segmentation**.
+
+## Abstract
+
+Transrectal ultrasound (TRUS) segmentation is clinically important but remains challenging because TRUS images often exhibit low contrast, blurred anatomical boundaries, and substantial appearance variability. PRISM addresses this problem through a privileged-learning framework in which MRI is used as privileged information during training to guide feature learning, while deployment remains TRUS-only. Specifically, PRISM initializes both student and teacher branches from LiteMedSAM, aligns latent representations across modalities with an MMD-based distribution constraint, and performs cross-modal feature interaction through a synergistic learning module with adaptive feature fusion. At inference time, the MRI branch is removed, and the learned feature interaction is transferred into a uni-modal enhancement path so that the model preserves the benefits of privileged supervision without requiring MRI input. This design enables PRISM to improve TRUS segmentation quality while maintaining a practical deployment setting.
+
+## Framework
+
+The README is prepared for the framework figure below.  
+To render it on GitHub, place your uploaded architecture figure at:
+
+`assets/prism_framework.png`
+
+Then uncomment or keep the following line as the displayed figure:
+
+```md
+![PRISM framework](assets/prism_framework.png)
+```
 
 ## Overview
 
-This release contains the core dual-modal training and evaluation path used for PRISM:
+This repository currently provides the core PRISM training and evaluation pipeline:
 
-- `train_dual_modal.py` for training
-- `evaluate.py` for evaluation
-
-The public release is intentionally narrow and focuses on the main training and evaluation workflow.
+- `train_dual_modal.py` for dual-modal training with privileged MRI guidance
+- `evaluate.py` for unified evaluation of prediction `.npz` files
 
 ## Expected Data Layout
 
@@ -62,3 +77,21 @@ python evaluate.py \
 
 - `-trus_pretrained_checkpoint` and `-mri_pretrained_checkpoint` are optional. If omitted, the script falls back to `-pretrained_checkpoint`.
 - The evaluation script expects prediction `.npz` files with a `segs` array and ground-truth `.npz` files with a `gts` array.
+
+## License
+
+This repository is released under the **Apache License 2.0**. See [LICENSE](LICENSE) for the full text.
+
+## Acknowledgements
+
+This project builds on and benefits from several important prior works and open-source efforts:
+
+- **MedSAM / LiteMedSAM** for the medical adaptation of the Segment Anything framework and the lightweight initialization used in this repository.
+- **LUPI (Learning Using Privileged Information)** for the privileged-information learning paradigm that motivates PRISM's training strategy.
+- Open-source community efforts that make code, pretrained models, and research artifacts accessible for reproducible medical AI research.
+
+If PRISM materially reuses ideas, components, or resources from a specific project such as MedSAM, LiteMedSAM, or other public repositories, we recommend citing the corresponding original papers and repositories in addition to citing PRISM itself.
+
+## Citation
+
+If you find this repository useful, please cite the PRISM paper and also acknowledge the upstream works that PRISM builds upon.
