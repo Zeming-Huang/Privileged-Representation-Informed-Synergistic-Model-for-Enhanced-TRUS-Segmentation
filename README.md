@@ -79,10 +79,42 @@ This project builds on and benefits from several important prior works and open-
 
 - **MedSAM / LiteMedSAM** for the medical adaptation of the Segment Anything framework and the lightweight initialization used in this repository.
 - **LUPI (Learning Using Privileged Information)** for the privileged-information learning paradigm that motivates PRISM's training strategy.
+- The **MR to Ultrasound Registration for Prostate Challenge** dataset and related open resources for enabling reproducible prostate MRI-TRUS research.
 - Open-source community efforts that make code, pretrained models, and research artifacts accessible for reproducible medical AI research.
 
-If PRISM materially reuses ideas, components, or resources from a specific project such as MedSAM, LiteMedSAM, or other public repositories, we recommend citing the corresponding original papers and repositories in addition to citing PRISM itself.
+If you use this repository, please also acknowledge the upstream works and datasets that materially support the PRISM pipeline.
 
 ## Citation
 
-If you find this repository useful, please cite the PRISM paper and also acknowledge the upstream works that PRISM builds upon.
+If you find this repository useful, please cite the PRISM paper when available. In addition, please consider citing the following upstream work and dataset used in this project context.
+
+### MedSAM
+
+```bibtex
+@article{MedSAM,
+  title={Segment Anything in Medical Images},
+  author={Ma, Jun and He, Yuting and Li, Feifei and Han, Lin and You, Chenyu and Wang, Bo},
+  journal={Nature Communications},
+  volume={15},
+  pages={654},
+  year={2024}
+}
+```
+
+### MR to Ultrasound Registration for Prostate Challenge Dataset
+
+```bibtex
+@dataset{baum2023mrus_prostate_challenge,
+  author={Baum, Zachary M. C. and Saeed, Shaheer U. and Min, Zhe and Hu, Yipeng and Barratt, Dean C.},
+  title={MR to Ultrasound Registration for Prostate Challenge - Dataset},
+  year={2023},
+  version={1.1.0},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.8004388},
+  url={https://doi.org/10.5281/zenodo.8004388}
+}
+```
+
+Reference text:
+
+Baum, Z. M. C., Saeed, S. U., Min, Z., Hu, Y., & Barratt, D. C. (2023). *MR to Ultrasound Registration for Prostate Challenge - Dataset* (Version 1.1.0) [Data set]. MICCAI 2023. Zenodo. [https://doi.org/10.5281/zenodo.8004388](https://doi.org/10.5281/zenodo.8004388)
